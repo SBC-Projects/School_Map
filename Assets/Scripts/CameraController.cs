@@ -49,8 +49,6 @@ public class CameraController : MonoBehaviour
         transform.eulerAngles = new Vector3(transform.eulerAngles.x + scaledAndCorrectedMouse.x, transform.eulerAngles.y + scaledAndCorrectedMouse.y, 0);
         
         Win32.SetCursorPos((int)255, (int)255);
-
-        lastMouse = new Vector3(255, 255, 0);
     }
 }
 
