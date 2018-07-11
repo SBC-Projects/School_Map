@@ -11,21 +11,49 @@ public class CameraController : MonoBehaviour
     float shiftAdd = 250.0f; //multiplied by how long shift is held.  Basically running
     float maxShift = 1000.0f; //Maximum speed when holdin gshift
     float camSens = 0.25f; //How sensitive it with mouse
-    private Vector3 lastMouse = new Vector3(255, 255, 255); //kind of in the middle of the screen, rather than at the top (play)
-                                                            //private float totalRun = 1.0f;
+    bool isSecondPass = false;
+    //lastMouse is relative to the whole screen
+    private Vector3 lastMouse;
+    private bool isFirstTwoFrames = true;
+    private bool isSecondFrame = false;
 
+    //private float totalRun = 1.0f;
+
+    void Start()
+    {
+        //Setting lastMouse so it is relative to the screen position
+
+        Win32.SetCursorPos((int)255, (int)255);
+        Cursor.visible = false;
+        
+    }
 
     void Update()
     {
+        //On the first frame the mouse is set to the screen position
+        //Input.mousePosition is only updated on the second frame
+        if (isFirstTwoFrames)
+        {
+            if (isSecondFrame)
+            {
+                lastMouse = Input.mousePosition;
+                isFirstTwoFrames = false;
+            }
+            else { isSecondFrame = true; }
+        }
+        
+
+        
         Vector3 mouseVec = new Vector3();
         mouseVec = Input.mousePosition;
         Vector3 difMouse = mouseVec - lastMouse;
         Vector3 scaledAndCorrectedMouse = new Vector3(-difMouse.y * camSens, difMouse.x * camSens, 0);
-        lastMouse = new Vector3(transform.eulerAngles.x + scaledAndCorrectedMouse.x, transform.eulerAngles.y + scaledAndCorrectedMouse.y, 0);
-        transform.eulerAngles = lastMouse;
-
+        
+        
+        transform.eulerAngles = new Vector3(transform.eulerAngles.x + scaledAndCorrectedMouse.x, transform.eulerAngles.y + scaledAndCorrectedMouse.y, 0);
+        
         Win32.SetCursorPos((int)255, (int)255);
-        lastMouse = new Vector3(255,255,0);
+
         /*
         lastMouse = Input.mousePosition - lastMouse;
         lastMouse = new Vector3(-lastMouse.y * camSens, lastMouse.x * camSens, 0);
@@ -69,6 +97,7 @@ public class CameraController : MonoBehaviour
 
     }
 
+    /*
     private Vector3 GetBaseInput()
     { //returns the basic values, if it's 0 than it's not active.
         Vector3 p_Velocity = new Vector3();
@@ -89,7 +118,7 @@ public class CameraController : MonoBehaviour
             p_Velocity += new Vector3(1, 0, 0);
         }
         return p_Velocity;
-    }
+    }*/
 
 
 }
@@ -98,7 +127,7 @@ public class Win32
 {
     [DllImport("User32.Dll")]
     public static extern long SetCursorPos(int x, int y);
-
+    /*
     [DllImport("user32.dll")]
     [return: MarshalAs(UnmanagedType.Bool)]
     public static extern bool GetCursorPos(out POINT lpPoint);
@@ -114,5 +143,5 @@ public class Win32
             this.X = x;
             this.Y = y;
         }
-    }
+    }*/
 }
