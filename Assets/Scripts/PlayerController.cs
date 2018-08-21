@@ -1,36 +1,18 @@
-﻿using System;
-using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
 
-public class PlayerController : MonoBehaviour {
-    public int speed = 20;
-    public Camera myCam;
-	// Use this for initialization
-	void Start () {
-		
-	}
-	
-	// Update is called once per frame
-	void Update () {
-        updateMovement();
-        updateCameraPosition();
-	}
+public class playerController : MonoBehaviour
+{
 
-    private void updateCameraPosition()
+    public Rigidbody Rigid;
+    public float MouseSensitivity;
+    public float MoveSpeed;
+    public float JumpForce;
+
+    void Update()
     {
-        Vector3 curPosition = transform.position;
-        curPosition.y += 25;
-
-        myCam.transform.position = curPosition;
-    }
-
-    private void updateMovement()
-    {
-        transform.eulerAngles = new Vector3(0,myCam.transform.eulerAngles.y,0);
-
-        transform.Translate(new Vector3(Input.GetAxis("Horizontal")*speed,
-            0, 
-            Input.GetAxis("Vertical")*speed));
+        Rigid.MoveRotation(Rigid.rotation * Quaternion.Euler(new Vector3(0, Input.GetAxis("Mouse X") * MouseSensitivity, 0)));
+        Rigid.MovePosition(transform.position + (transform.forward * Input.GetAxis("Vertical") * MoveSpeed) + (transform.right * Input.GetAxis("Horizontal") * MoveSpeed));
+        if (Input.GetKeyDown("space"))
+            Rigid.AddForce(transform.up * JumpForce);
     }
 }
