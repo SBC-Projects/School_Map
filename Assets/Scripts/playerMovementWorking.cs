@@ -25,6 +25,21 @@ public class playerMovementWorking : MonoBehaviour
     //rotation on x and y axis
     float rotX;
     float rotY;
+    Rigidbody rb;
+    public Vector3 jump;
+    public float jumpForce = 2.0f;
+    public bool isGrounded;
+
+    void Start()
+    {
+        rb = GetComponent<Rigidbody>();
+        jump = new Vector3(0.0f, jumpForce, 0.0f);
+    }
+
+    void OnCollisionStay()
+    {
+        isGrounded = true;
+    }
 
     void Update()
     {
@@ -47,6 +62,12 @@ public class playerMovementWorking : MonoBehaviour
             Camera.transform.localRotation = Quaternion.Euler(-rotY, 0f, 0f);
             transform.rotation = Quaternion.Euler(0f, rotX, 0f);
 
+            //jumping mechanic uses addForce because using transform position is like teleporting
+            if (Input.GetKeyDown(KeyCode.Space) && isGrounded)
+            {
+                rb.AddForce(jump * jumpForce, ForceMode.Impulse);
+                isGrounded = false;
+            }
         }
     }
 }
