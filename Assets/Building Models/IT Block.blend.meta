@@ -72,6 +72,8 @@ ModelImporter:
     100132: Plane
     100134: Sphere
     100136: Sphere_001
+    100138: Cube_030
+    100140: Cube_058
     400000: Cube
     400002: Cube_001
     400004: Cube_002
@@ -141,6 +143,8 @@ ModelImporter:
     400132: Plane
     400134: Sphere
     400136: Sphere_001
+    400138: Cube_030
+    400140: Cube_058
     2100000: unnamed
     2100002: Material_005
     2100004: Material
@@ -215,6 +219,8 @@ ModelImporter:
     2300130: Plane
     2300132: Sphere
     2300134: Sphere_001
+    2300136: Cube_030
+    2300138: Cube_058
     3300000: Cube
     3300002: Cube_001
     3300004: Cube_002
@@ -283,6 +289,8 @@ ModelImporter:
     3300130: Plane
     3300132: Sphere
     3300134: Sphere_001
+    3300136: Cube_030
+    3300138: Cube_058
     4300000: Cube_029
     4300002: Plane
     4300004: Cylinder_007
@@ -351,6 +359,8 @@ ModelImporter:
     4300130: Cube_002
     4300132: Cube
     4300134: Cylinder_002
+    4300136: Cube_058
+    4300138: Cube_030
     7400000: Default Take
     9500000: //RootNode
   externalObjects: {}
