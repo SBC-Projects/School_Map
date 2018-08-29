@@ -29,6 +29,8 @@ public class playerMovementWorking : MonoBehaviour
     public Vector3 jump;
     public float jumpForce = 2.0f;
     public bool isGrounded;
+	public Vector3 teleportPoint;
+	private bool shouldMove = true;
 
     void Start()
     {
@@ -41,11 +43,19 @@ public class playerMovementWorking : MonoBehaviour
         isGrounded = true;
     }
 
+	void OnCollisionEnter(Collision collision)
+	{
+		if(collision.gameObject.name == "Toilet Block" ) 
+		{
+			shouldMove = false;
+		}
+	}
+
     void Update()
     {
         //first declare a float to hold the value of the virtual axis
         //and multiply it by the speed
-        if (GamePaused == false)
+		if (GamePaused == false && shouldMove == true)
         {
 
             MoveFB = Input.GetAxis("Vertical") * speed;
