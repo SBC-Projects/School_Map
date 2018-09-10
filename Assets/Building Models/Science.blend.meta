@@ -1,7 +1,7 @@
 fileFormatVersion: 2
 guid: 728851deb04a79a498a4a343816859c1
 ModelImporter:
-  serializedVersion: 22
+  serializedVersion: 23
   fileIDToRecycleName:
     100000: Cone
     100002: Cone_001
@@ -330,6 +330,8 @@ ModelImporter:
     100648: Plane_022
     100650: //RootNode
     100652: Text
+    100654: Cube_014
+    100656: Cube_015
     400000: Cone
     400002: Cone_001
     400004: Cone_002
@@ -657,6 +659,8 @@ ModelImporter:
     400648: Plane_022
     400650: //RootNode
     400652: Text
+    400654: Cube_014
+    400656: Cube_015
     2100000: Brick_001
     2100002: Rounded_Tables
     2100004: unnamed
@@ -1000,6 +1004,8 @@ ModelImporter:
     2300646: Plane_021
     2300648: Plane_022
     2300650: Text
+    2300652: Cube_014
+    2300654: Cube_015
     3300000: Cone
     3300002: Cone_001
     3300004: Cone_002
@@ -1326,6 +1332,8 @@ ModelImporter:
     3300646: Plane_021
     3300648: Plane_022
     3300650: Text
+    3300652: Cube_014
+    3300654: Cube_015
     4300000: Plane_022
     4300002: Cone_004
     4300004: Plane_021
@@ -1652,10 +1660,97 @@ ModelImporter:
     4300646: Plane_004
     4300648: Plane_005
     4300650: Text
+    4300652: Cube_015
+    4300654: Cube_014
     7400000: Default Take
     9500000: //RootNode
     2186277476908879412: ImportLogs
-  externalObjects: {}
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Brick_001
+    second: {fileID: 2100000, guid: 91850c19f360d584bbc9a4e2b9956b65, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Door_001
+    second: {fileID: 2100000, guid: 7e97f83b92d2a9542814e9adf551efcd, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Glass_001
+    second: {fileID: 2100000, guid: 94ddd7f6047af9b438124878ecb3ad84, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Glass_1__001
+    second: {fileID: 2100000, guid: da5b0c7a9ff1ebd4ba4e3320969059a3, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Greyish
+    second: {fileID: 2100000, guid: e1469a08c12e9194caa6b921c1ea182e, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Material_000
+    second: {fileID: 2100000, guid: cda07e5fd9d489641809d43ce84be4b9, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Material_001
+    second: {fileID: 2100000, guid: 6f82a2b62d9f3ab42ba9c0fe3bd7479e, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Material_007
+    second: {fileID: 2100000, guid: 906463eeb0d26194b83e14e22c2f1923, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Material_008
+    second: {fileID: 2100000, guid: c32de56e832f3fe4eb730b3a0b701296, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Metal
+    second: {fileID: 2100000, guid: 843a5555bf0a6304994f981cb0c266fb, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Plain_White_001
+    second: {fileID: 2100000, guid: cddd3e584f2f66f4eb48969bf6135434, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Railings_001
+    second: {fileID: 2100000, guid: 07b9023e64e347749ba83649b330f0ef, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Rounded_Tables
+    second: {fileID: 2100000, guid: 4f1b24924e7e66b4a8328276a205c408, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Stairs_001
+    second: {fileID: 2100000, guid: 2983cbc6e6c1e0c409c487b530a90606, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Tabletops_001
+    second: {fileID: 2100000, guid: f2cb8dec2e2c30d488339dcfbfe0caff, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Whiteboard_001
+    second: {fileID: 2100000, guid: f4f23501f9d52df4692985d6e2fc08fc, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: unnamed
+    second: {fileID: 2100000, guid: a5ae2f738c4516a4c8e692d194dcb37d, type: 2}
   materials:
     importMaterials: 1
     materialName: 0
@@ -1706,6 +1801,8 @@ ModelImporter:
     secondaryUVHardAngle: 88
     secondaryUVPackMargin: 4
     useFileScale: 1
+    previousCalculatedGlobalScale: 1
+    hasPreviousCalculatedGlobalScale: 1
   tangentSpace:
     normalSmoothAngle: 60
     normalImportMode: 0
