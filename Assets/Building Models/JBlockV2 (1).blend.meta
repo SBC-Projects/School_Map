@@ -1,7 +1,7 @@
 fileFormatVersion: 2
 guid: c43a9a516478cd24ca520432911a038a
 ModelImporter:
-  serializedVersion: 22
+  serializedVersion: 23
   fileIDToRecycleName:
     100000: Cube
     100002: Cube_001
@@ -102,6 +102,9 @@ ModelImporter:
     100192: Roof2
     100194: Stairs_000
     100196: Stairs_005
+    100198: Cube_071
+    100200: Cube_072
+    100202: Cube_073
     400000: Cube
     400002: Cube_001
     400004: Cube_002
@@ -201,6 +204,9 @@ ModelImporter:
     400192: Roof2
     400194: Stairs_000
     400196: Stairs_005
+    400198: Cube_071
+    400200: Cube_072
+    400202: Cube_073
     2100000: Material_093
     2100002: Material_029
     2100004: Material_058
@@ -381,6 +387,9 @@ ModelImporter:
     2300190: Roof2
     2300192: Stairs_000
     2300194: Stairs_005
+    2300196: Cube_071
+    2300198: Cube_072
+    2300200: Cube_073
     3300000: Cube
     3300002: Cube_001
     3300004: Cube_002
@@ -479,6 +488,9 @@ ModelImporter:
     3300190: Roof2
     3300192: Stairs_000
     3300194: Stairs_005
+    3300196: Cube_071
+    3300198: Cube_072
+    3300200: Cube_073
     4300000: Roof1
     4300002: Plane_013
     4300004: Cube_032
@@ -577,6 +589,9 @@ ModelImporter:
     4300190: Cube_069
     4300192: Cube_070
     4300194: Roof2
+    4300196: Cube_071
+    4300198: Cube_073
+    4300200: Cube_072
     7400000: Default Take
     9500000: //RootNode
     2186277476908879412: ImportLogs
@@ -631,6 +646,8 @@ ModelImporter:
     secondaryUVHardAngle: 88
     secondaryUVPackMargin: 4
     useFileScale: 1
+    previousCalculatedGlobalScale: 1
+    hasPreviousCalculatedGlobalScale: 1
   tangentSpace:
     normalSmoothAngle: 60
     normalImportMode: 0

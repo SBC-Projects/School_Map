@@ -1,7 +1,7 @@
 fileFormatVersion: 2
 guid: 728851deb04a79a498a4a343816859c1
 ModelImporter:
-  serializedVersion: 22
+  serializedVersion: 23
   fileIDToRecycleName:
     100000: Cone
     100002: Cone_001
@@ -330,6 +330,11 @@ ModelImporter:
     100648: Plane_022
     100650: //RootNode
     100652: Text
+    100654: Cube_014
+    100656: Cube_015
+    100658: Cube_016
+    100660: Cube_017
+    100662: Cube_018
     400000: Cone
     400002: Cone_001
     400004: Cone_002
@@ -657,6 +662,11 @@ ModelImporter:
     400648: Plane_022
     400650: //RootNode
     400652: Text
+    400654: Cube_014
+    400656: Cube_015
+    400658: Cube_016
+    400660: Cube_017
+    400662: Cube_018
     2100000: Brick_001
     2100002: Rounded_Tables
     2100004: unnamed
@@ -1000,6 +1010,11 @@ ModelImporter:
     2300646: Plane_021
     2300648: Plane_022
     2300650: Text
+    2300652: Cube_014
+    2300654: Cube_015
+    2300656: Cube_016
+    2300658: Cube_017
+    2300660: Cube_018
     3300000: Cone
     3300002: Cone_001
     3300004: Cone_002
@@ -1326,6 +1341,11 @@ ModelImporter:
     3300646: Plane_021
     3300648: Plane_022
     3300650: Text
+    3300652: Cube_014
+    3300654: Cube_015
+    3300656: Cube_016
+    3300658: Cube_017
+    3300660: Cube_018
     4300000: Plane_022
     4300002: Cone_004
     4300004: Plane_021
@@ -1652,6 +1672,11 @@ ModelImporter:
     4300646: Plane_004
     4300648: Plane_005
     4300650: Text
+    4300652: Cube_018
+    4300654: Cube_017
+    4300656: Cube_016
+    4300658: Cube_014
+    4300660: Cube_015
     7400000: Default Take
     9500000: //RootNode
     2186277476908879412: ImportLogs
@@ -1706,6 +1731,8 @@ ModelImporter:
     secondaryUVHardAngle: 88
     secondaryUVPackMargin: 4
     useFileScale: 1
+    previousCalculatedGlobalScale: 1
+    hasPreviousCalculatedGlobalScale: 1
   tangentSpace:
     normalSmoothAngle: 60
     normalImportMode: 0
