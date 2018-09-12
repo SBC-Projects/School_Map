@@ -1,60 +1,30 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
-using System.Runtime.InteropServices;
+﻿using UnityEngine;
 
 public class CameraController : MonoBehaviour
 {
-    float camSens = 0.25f; //How sensitive it with mouse
 
-    bool isSecondPass = false;
-    //lastMouse is relative to the whole screen
-    private Vector3 lastMouse;
-    private bool isFirstTwoFrames = true;
-    private bool isSecondFrame = false;
+    Vector2 mouseLook;
+    Vector2 smoothV;
+    public float sensitivity = 5.0f;
+    public float smoothing = 2.0f;
 
-    //private float totalRun = 1.0f;
+    GameObject character;
 
     void Start()
     {
-        //Setting lastMouse so it is relative to the screen position
-
-        Win32.SetCursorPos((int)255, (int)255);
-        Cursor.visible = false;
-        
+        character = this.transform.parent.gameObject;
     }
-    
+
     void Update()
     {
-        //On the first frame the mouse is set to the screen position
-        //Input.mousePosition is only updated on the second frame
-        if (isFirstTwoFrames)
-        {
-            if (isSecondFrame)
-            {
-                lastMouse = Input.mousePosition;
-                isFirstTwoFrames = false;
-            }
-            else { isSecondFrame = true; }
-        }
-        
+        var md = new Vector2(Input.GetAxisRaw("Mouse X"), Input.GetAxisRaw("Mouse Y"));
 
-        
-        Vector3 mouseVec = new Vector3();
-        mouseVec = Input.mousePosition;
-        Vector3 difMouse = mouseVec - lastMouse;
-        Vector3 scaledAndCorrectedMouse = new Vector3(-difMouse.y * camSens, difMouse.x * camSens, 0);
-        
-        
-        transform.eulerAngles = new Vector3(transform.eulerAngles.x + scaledAndCorrectedMouse.x, transform.eulerAngles.y + scaledAndCorrectedMouse.y, 0);
-        
-        Win32.SetCursorPos((int)255, (int)255);
+        md = Vector2.Scale(md, new Vector2(sensitivity * smoothing, sensitivity * smoothing));
+        smoothV.x = Mathf.Lerp(smoothV.x, md.x, 1f / smoothing);
+        smoothV.y = Mathf.Lerp(smoothV.y, md.y, 1f / smoothing);
+        mouseLook += smoothV;
+
+        transform.localRotation = Quaternion.AngleAxis(-mouseLook.y, Vector3.right);
+        character.transform.localRotation = Quaternion.AngleAxis(mouseLook.x, character.transform.up);
     }
-}
-
-public class Win32
-{
-    [DllImport("User32.Dll")]
-    public static extern long SetCursorPos(int x, int y);
-
 }

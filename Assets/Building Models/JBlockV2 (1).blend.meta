@@ -206,6 +206,10 @@ ModelImporter:
     100400: Plane_030
     100402: Plane_031
     100404: Plane_032
+    100406: Plane_033
+    100408: Plane_034
+    100410: Plane_035
+    100412: Plane_036
     400000: Cube
     400002: Cube_001
     400004: Cube_002
@@ -409,6 +413,10 @@ ModelImporter:
     400400: Plane_030
     400402: Plane_031
     400404: Plane_032
+    400406: Plane_033
+    400408: Plane_034
+    400410: Plane_035
+    400412: Plane_036
     2100000: Material_093
     2100002: Material_029
     2100004: Material_058
@@ -693,6 +701,10 @@ ModelImporter:
     2300398: Plane_030
     2300400: Plane_031
     2300402: Plane_032
+    2300404: Plane_033
+    2300406: Plane_034
+    2300408: Plane_035
+    2300410: Plane_036
     3300000: Cube
     3300002: Cube_001
     3300004: Cube_002
@@ -895,6 +907,10 @@ ModelImporter:
     3300398: Plane_030
     3300400: Plane_031
     3300402: Plane_032
+    3300404: Plane_033
+    3300406: Plane_034
+    3300408: Plane_035
+    3300410: Plane_036
     4300000: Roof1
     4300002: Plane_013
     4300004: Cube_032
@@ -1097,6 +1113,10 @@ ModelImporter:
     4300398: Plane_030
     4300400: Plane_032
     4300402: Plane_031
+    4300404: Plane_035
+    4300406: Plane_034
+    4300408: Plane_033
+    4300410: Plane_036
     7400000: Default Take
     9500000: //RootNode
     2186277476908879412: ImportLogs

@@ -1,36 +1,25 @@
-﻿using System;
-using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
 
-public class PlayerController : MonoBehaviour {
-    public int speed = 20;
-    public Camera myCam;
-	// Use this for initialization
-	void Start () {
-		
-	}
-	
-	// Update is called once per frame
-	void Update () {
-        updateMovement();
-        updateCameraPosition();
-	}
+public class PlayerController : MonoBehaviour
+{
 
-    private void updateCameraPosition()
+    public float speed = 10.0F;
+
+    void Start()
     {
-        Vector3 curPosition = transform.position;
-        curPosition.y += 25;
-
-        myCam.transform.position = curPosition;
+        Cursor.lockState = CursorLockMode.Locked;
     }
 
-    private void updateMovement()
+    void Update()
     {
-        transform.eulerAngles = new Vector3(0,myCam.transform.eulerAngles.y,0);
+        float translation = Input.GetAxis("Vertical") * speed;
+        float straffe = Input.GetAxis("Horizontal") * speed;
+        translation *= Time.deltaTime;
+        straffe *= Time.deltaTime;
 
-        transform.Translate(new Vector3(Input.GetAxis("Horizontal")*speed,
-            0, 
-            Input.GetAxis("Vertical")*speed));
+        transform.Translate(straffe, 0, translation);
+
+        if (Input.GetKeyDown("escape"))
+            Cursor.lockState = CursorLockMode.None;
     }
 }
